@@ -1,6 +1,10 @@
-/*=============================
+/*==================================================
+    LAS TUNAS RESILIENTE - STYLE.CSS
+==================================================*/
+
+/*==========================
   CONFIGURACIÓN GENERAL
-=============================*/
+==========================*/
 
 *{
     margin:0;
@@ -10,99 +14,153 @@
 
 html{
     scroll-behavior:smooth;
+    scroll-padding-top:90px;
 }
 
 body{
-    font-family:'Poppins', sans-serif;
+    font-family:'Poppins',sans-serif;
     background:#f5f7f4;
     color:#333;
+    overflow-x:hidden;
 }
 
-/*=============================
-  MENÚ
-=============================*/
+img{
+    max-width:100%;
+    display:block;
+}
+
+section{
+    width:90%;
+    max-width:1200px;
+    margin:70px auto;
+}
+
+.separador{
+    width:85%;
+    max-width:1200px;
+    margin:50px auto;
+    border-top:3px solid #2e8b57;
+    opacity:.25;
+}
+
+/*==========================
+  HEADER
+==========================*/
 
 header{
     position:fixed;
     top:0;
     left:0;
     width:100%;
-    background:rgba(20,95,55,.95);
+    background:rgba(20,95,55,.96);
+    backdrop-filter:blur(8px);
     z-index:1000;
+    box-shadow:0 4px 15px rgba(0,0,0,.15);
 }
 
 .navbar{
-    width:90%;
-    max-width:1200px;
-    margin:auto;
-    display:flex;
-    justify-content:space-between;
+
+    flex-wrap:nowrap;
+
+    padding:8px 0;
+
     align-items:center;
-    padding:15px 0;
+
 }
+/*==========================
+  LOGO
+==========================*/
 
 .logo{
     display:flex;
     align-items:center;
     gap:15px;
-    color:white;
 }
 
 .logo img{
-    width:80px;
-    height:80px;
-    border-radius:50%;
-    background:white;
-    padding:6px;
-}
 
+    width:45px;
+    height:45px;
+
+    object-fit:cover;
+
+    border-radius:50%;
+}
 .logo h2{
-    font-size:28px;
+
+    font-size:16px;
+
+    line-height:1.2;
+
 }
 
 .logo p{
-    font-size:15px;
+    color:#d8f4d8;
+    font-size:13px;
 }
 
-.navbar ul{
+/*==========================
+  MENÚ
+==========================*/
+
+#menu{
     display:flex;
     list-style:none;
-    gap:25px;
+    gap:28px;
 }
 
-.navbar a{
+#menu li{
+    list-style:none;
+}
+
+#menu a{
     color:white;
     text-decoration:none;
-    font-weight:bold;
+    font-weight:600;
     transition:.3s;
 }
 
-.navbar a:hover{
-    color:#9be564;
+#menu a:hover{
+    color:#9ee46b;
 }
 
-/*=============================
+/*==========================
+  BOTÓN HAMBURGUESA
+==========================*/
+
+.menu-btn{
+
+    display:block;
+
+    font-size:28px;
+
+    padding:5px;
+
+}
+
+/*==========================
   PORTADA
-=============================*/
+==========================*/
 
 .hero{
+
     height:100vh;
-    background:
-    linear-gradient(rgba(0,0,0,.45), rgba(0,0,0,.45)),
-    url("fondo.jpg");
-    background-size:cover;
-    background-position:center;
-    background-repeat:no-repeat;
 
     display:flex;
     justify-content:center;
     align-items:center;
-
     text-align:center;
+
+    padding:130px 30px 40px;
 
     color:white;
 
-    padding:120px 30px 30px;
+    background:
+    linear-gradient(rgba(0,0,0,.45),rgba(0,0,0,.45)),
+    url("fondo.jpg");
+
+    background-size:cover;
+    background-position:center;
 }
 
 .hero-contenido{
@@ -111,59 +169,203 @@ header{
 
 .hero h1{
     font-size:68px;
-    color:white;
-    text-shadow:3px 3px 15px rgba(0,0,0,.9);
     margin-bottom:25px;
+    text-shadow:3px 3px 12px rgba(0,0,0,.8);
 }
+
 .hero p{
     font-size:24px;
     line-height:38px;
-    color:white;
-    text-shadow:2px 2px 10px rgba(0,0,0,.9);
     margin-bottom:40px;
+    text-shadow:2px 2px 10px rgba(0,0,0,.8);
 }
+
+/*==========================
+  BOTONES
+==========================*/
+
 .boton{
+
     display:inline-block;
+
     background:#46b946;
     color:white;
-    text-decoration:none;
+
     padding:18px 45px;
+
     border-radius:50px;
-    font-size:18px;
+
+    text-decoration:none;
+
     font-weight:600;
-    box-shadow:0 10px 25px rgba(0,0,0,.25);
+
     transition:.3s;
+
+    box-shadow:0 10px 25px rgba(0,0,0,.25);
+
 }
 
 .boton:hover{
-    transform:translateY(-5px);
+
     background:#2f8f2f;
-}/*=============================
-  PROYECTO
-=============================*/
+
+    transform:translateY(-5px);
+
+}
+
+/*==========================
+  RESPONSIVE HEADER
+==========================*/
+
+@media(max-width:768px){
+
+    .logo img{
+
+        width:60px;
+        height:60px;
+
+        object-fit:cover;
+
+        border-radius:50%;
+
+        border:2px solid white;
+
+        background:white;
+
+        padding:3px;
+
+    }
+
+}
+    .logo img{
+
+    width:75px;
+    height:75px;
+
+    object-fit:cover;
+
+    border-radius:50%;
+
+    border:3px solid white;
+
+    background:white;
+
+    padding:4px;
+
+    box-shadow:0 4px 12px rgba(0,0,0,.25);
+
+
+
+    .logo h2{
+
+        font-size:20px;
+
+    }
+
+    .logo p{
+
+        display:none;
+
+    }
+
+    .menu-btn{
+
+        display:block;
+
+    }
+
+    #menu{
+
+        display:none;
+
+        width:100%;
+
+        flex-direction:column;
+
+        text-align:center;
+
+        margin-top:20px;
+
+        gap:18px;
+
+    }
+
+    #menu.activo{
+
+        display:flex;
+
+    }
+
+    .hero{
+
+        padding:120px 20px 40px;
+
+    }
+
+    .hero h1{
+
+        font-size:42px;
+
+    }
+
+    .hero p{
+
+        font-size:20px;
+        line-height:32px;
+
+    }
+
+    .boton{
+
+        width:100%;
+        max-width:320px;
+
+    }
+
+}/*==================================================
+    PROYECTO
+==================================================*/
 
 .proyecto{
-
-    width:90%;
-    max-width:1200px;
-    margin:80px auto;
-
     display:flex;
     align-items:center;
     justify-content:space-between;
     gap:60px;
 
+    background:#fff;
+    border-radius:25px;
+    border-top:8px solid #46b946;
+    border:2px solid #d9f0d9;
+    padding:50px;
+
+    box-shadow:0 10px 30px rgba(0,0,0,.12);
+    transition:.3s;
+}
+
+.proyecto:hover{
+    transform:translateY(-8px);
+    box-shadow:0 20px 45px rgba(0,0,0,.18);
 }
 
 .proyecto-texto{
-
     flex:1;
+}
 
+.proyecto-imagen{
+    flex:1;
+    display:flex;
+    justify-content:center;
+}
+
+.proyecto-imagen img{
+    max-width:500px;
+    border-radius:20px;
+    box-shadow:0 12px 30px rgba(0,0,0,.18);
 }
 
 .subtitulo{
     color:#2b9348;
-    font-weight:bold;
+    font-weight:700;
     text-transform:uppercase;
     letter-spacing:2px;
 }
@@ -177,437 +379,704 @@ header{
 .proyecto p{
     font-size:18px;
     line-height:30px;
-    margin-bottom:20px;
+    color:#444;
 }
 
-.proyecto-imagen img{
+/*==================================================
+    GESTIÓN DE RESIDUOS
+==================================================*/
 
-    width:100%;
-    max-width:500px;
+.residuos{
 
-    border-radius:20px;
+    background:#fff;
+    border-radius:25px;
+    border-top:8px solid #46b946;
+    border:2px solid #d9f0d9;
 
-    box-shadow:0 15px 35px rgba(0,0,0,.18);
+    padding:50px;
 
-}
+    box-shadow:0 10px 30px rgba(0,0,0,.12);
 
-.proyecto-imagen img{
-    width:300px;
-    transition:.4s;
-}
-
-.proyecto-imagen img:hover{
-    transform:scale(1.05);
-}
-
-.boton-secundario{
-    display:inline-block;
-    margin-top:20px;
-    padding:15px 35px;
-    background:#176c3a;
-    color:white;
-    text-decoration:none;
-    border-radius:40px;
     transition:.3s;
+
 }
 
-.boton-secundario:hover{
-    background:#0f4f2a;
-}
+.residuos:hover{
 
-/*=============================
-  TÍTULOS DE SECCIÓN
-=============================*/
+    transform:translateY(-8px);
+
+    box-shadow:0 20px 45px rgba(0,0,0,.18);
+
+}
 
 .titulo-seccion{
+
     text-align:center;
-    max-width:800px;
-    margin:0 auto 50px;
+
+    margin-bottom:45px;
+
 }
 
 .titulo-seccion h2{
+
     font-size:42px;
+
     color:#176c3a;
+
     margin-bottom:20px;
+
 }
 
 .titulo-seccion p{
-    font-size:18px;
-    line-height:30px;
-    color:#555;
-}/*=============================
-  GESTIÓN DE RESIDUOS
-=============================*/
 
-.residuos{
-    margin:60px auto;
+    font-size:18px;
+
+    color:#555;
+
+    line-height:30px;
+
 }
 
+/*==================================================
+    TARJETAS
+==================================================*/
+
 .contenedor-residuos{
+
     display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+
+    grid-template-columns:repeat(3,1fr);
+
     gap:30px;
-    margin-top:50px;
+
 }
 
 .tarjeta{
-    background:white;
+
+    background:#fff;
+
     border-radius:20px;
+
     padding:30px;
-    box-shadow:0 10px 25px rgba(0,0,0,.1);
-    transition:0.3s;
+
+    box-shadow:0 8px 22px rgba(0,0,0,.10);
+
+    transition:.3s;
+
 }
 
 .tarjeta:hover{
-    transform:translateY(-10px);
-}
 
-.tarjeta h3{
-    font-size:26px;
-    margin-bottom:15px;
-}
+    transform:translateY(-8px);
 
-.tarjeta p{
-    line-height:28px;
-    color:#555;
 }
 
 .verde{
-    border-top:8px solid #4CAF50;
+
+    border-top:8px solid #46b946;
+
 }
 
 .azul{
+
     border-top:8px solid #2196F3;
+
 }
 
 .gris{
+
     border-top:8px solid #757575;
+
 }
 
-/*=============================
-  COMPOSTAJE
-=============================*/
+.tarjeta h3{
 
-.compostaje{
-    width:90%;
-    max-width:1200px;
-    margin:100px auto;
+    text-align:center;
+
+    font-size:28px;
+
+    margin-bottom:20px;
+
+}
+
+.tarjeta p{
+
+    line-height:28px;
+
+    color:#555;
+
+}
+
+/*==================================================
+    EJEMPLOS
+==================================================*/
+
+.ejemplos{
+
+    display:flex;
+
+    justify-content:center;
+
+    gap:12px;
+
+    margin-top:25px;
+
+}
+
+.ejemplos img{
+
+    width:90px;
+
+    height:90px;
+
+    object-fit:cover;
+
+    border-radius:12px;
+
+    transition:.3s;
+
+    box-shadow:0 5px 15px rgba(0,0,0,.15);
+
+}
+
+.ejemplos img:hover{
+
+    transform:scale(1.08);
+
+}
+
+/*==================================================
+    RESPONSIVE
+==================================================*/
+
+@media(max-width:768px){
+
+    .proyecto{
+
+        flex-direction:column;
+
+        text-align:center;
+
+        padding:35px;
+
+    }
+
+    .proyecto h2{
+
+        font-size:34px;
+
+    }
+
+    .contenedor-residuos{
+
+        grid-template-columns:1fr;
+
+    }
+
+    .tarjeta{
+
+        padding:25px;
+
+    }
+
+    .ejemplos img{
+
+        width:80px;
+
+        height:80px;
+
+    }
+
+}/*==================================================
+    COMPOSTAJE
+==================================================*/
+
+.compostaje,
+.secadero,
+.escuela{
 
     display:flex;
     align-items:center;
     justify-content:space-between;
     gap:60px;
-}
 
-.compostaje-imagen{
-    flex:1;
-    display:flex;
-    justify-content:center;
-}
-
-.compostaje-imagen img{
-    width:100%;
-    max-width:450px;
-    border-radius:20px;
-    box-shadow:0 10px 30px rgba(0,0,0,.15);
-}
-.compostaje-texto{
-    flex:1;
-}
-
-.compostaje-texto h2{
-    color:#176c3a;
-    font-size:42px;
-    margin:20px 0;
-}
-
-.compostaje-texto p{
-    font-size:18px;
-    line-height:30px;
-    margin-bottom:20px;
-}/*=============================
-  NUESTRA ESCUELA
-=============================*/
-
-.escuela{
-    width:90%;
-    max-width:1200px;
-    margin:100px auto;
-    display:flex;
-    align-items:center;
-    gap:60px;
-}
-
-.escuela-texto{
-    flex:1;
-}
-
-.escuela-texto h2{
-    color:#176c3a;
-    font-size:42px;
-    margin-bottom:20px;
-}
-
-.escuela-texto p{
-    font-size:18px;
-    line-height:30px;
-}
-
-.escuela-imagen{
-    flex:1;
-}
-
-.escuela-imagen img{
-    width:100%;
-    border-radius:20px;
-    box-shadow:0 10px 30px rgba(0,0,0,.15);
-}
-
-/*=============================
-  CONTACTO
-=============================*/
-
-.contacto{
-    background:#145f37;
-    color:white;
-    text-align:center;
-    padding:80px 20px;
-}
-
-.contacto h2{
-    font-size:40px;
-    margin-bottom:20px;
-}
-
-.contacto p{
-    font-size:18px;
-    margin:10px 0;
-}
-
-/*=============================
-  PIE DE PÁGINA
-=============================*/
-
-footer{
-    background:#0d4025;
-    color:white;
-    text-align:center;
-    padding:20px;
-}
-
-/*=============================
-  RESPONSIVE
-=============================*/
-
-@media(max-width:900px){
-
-    .navbar{
-        padding:10px 8%;
-    }
-
-    .navbar ul{
-        flex-wrap:wrap;
-        justify-content:center;
-    }
-
-    .hero h1{
-        font-size:42px;
-    }
-
-    .hero p{
-        font-size:18px;
-    }
-
-    .proyecto,
-    .compostaje,
-    .escuela{
-        flex-direction:column;
-        text-align:center;
-    }
-
-    .proyecto-imagen img{
-        width:220px;
-    }
-}/*=============================
-  SECADERO SOLAR
-=============================*/
-
-.secadero{
-
-    width:90%;
-    max-width:1200px;
-    margin:100px auto;
-
-    display:flex;
-    align-items:center;
-    gap:60px;
-
-}
-
-.secadero-imagen{
-
-    flex:1;
-
-}
-
-.secadero-imagen img{
-
-    width:100%;
-    border-radius:20px;
-    box-shadow:0 10px 30px rgba(0,0,0,.15);
-
-}
-
-.secadero-texto{
-
-    flex:1;
-
-}
-
-.secadero-texto h2{
-
-    color:#176c3a;
-    font-size:42px;
-    margin:20px 0;
-
-}
-
-.secadero-texto p{
-
-    font-size:18px;
-    line-height:30px;
-    margin-bottom:20px;
-
-}.iconos-residuos{
-
-    display:flex;
-
-    justify-content:center;
-
-    gap:25px;
-
-    margin:20px 0;
-
-}
-
-.iconos-residuos i{
-
-    width:70px;
-
-    height:70px;
-
-    background:white;
-
-    border-radius:50%;
-
-    display:flex;
-
-    justify-content:center;
-
-    align-items:center;
-
-    font-size:30px;
-
-    color:#2f8f2f;
-
-    box-shadow:0 5px 15px rgba(0,0,0,.2);
-
-}.separador{
-    width:80%;
-    max-width:1200px;
-    margin:50px auto;
-    border-top:3px solid #2e8b57;
-    opacity:0.3;
-}html{
-    scroll-behavior: smooth;
-    scroll-padding-top: 100px;
-}
-
-#proyecto,
-#residuos,
-#compostaje,
-#secadero,
-#escuela,
-#contacto{
-    scroll-margin-top: 100px;
-}.proyecto,
-.residuos,
-.compostaje,
-.secadero,
-.escuela,
-.contacto{
-
-    background:white;
-
+    background:#fff;
     border-radius:25px;
+    border-top:8px solid #46b946;
+    border:2px solid #d9f0d9;
 
     padding:50px;
 
-    margin:60px auto;
-
     box-shadow:0 10px 30px rgba(0,0,0,.12);
 
-    border:2px solid #d9f0d9;
-
-}.proyecto,
-.residuos,
-.compostaje,
-.secadero,
-.escuela,
-.contacto{
-
-    transition:.3s;
+    transition:.35s;
 
 }
 
-.proyecto:hover,
-.residuos:hover,
 .compostaje:hover,
 .secadero:hover,
-.escuela:hover,
+.escuela:hover{
+
+    transform:translateY(-8px);
+
+    box-shadow:0 20px 45px rgba(0,0,0,.18);
+
+}
+
+.compostaje-texto,
+.secadero-texto,
+.escuela-texto{
+
+    flex:1;
+
+}
+
+.compostaje-imagen,
+.secadero-imagen,
+.escuela-imagen{
+
+    flex:1;
+
+    display:flex;
+    justify-content:center;
+
+}
+
+.compostaje img,
+.secadero img,
+.escuela img{
+
+    width:100%;
+    max-width:470px;
+
+    border-radius:20px;
+
+    box-shadow:0 12px 30px rgba(0,0,0,.18);
+
+    transition:.35s;
+
+}
+
+.compostaje img:hover,
+.secadero img:hover,
+.escuela img:hover{
+
+    transform:scale(1.03);
+
+}
+
+.compostaje h2,
+.secadero h2,
+.escuela h2{
+
+    color:#176c3a;
+
+    font-size:42px;
+
+    margin:20px 0;
+
+}
+
+.compostaje p,
+.secadero p,
+.escuela p{
+
+    font-size:18px;
+
+    line-height:30px;
+
+    color:#444;
+
+}
+
+/*==================================================
+    CONTACTO
+==================================================*/
+
+.contacto{
+
+    background:#fff;
+
+    border-radius:25px;
+
+    border-top:8px solid #46b946;
+
+    border:2px solid #d9f0d9;
+
+    text-align:center;
+
+    padding:55px;
+
+    box-shadow:0 10px 30px rgba(0,0,0,.12);
+
+    transition:.35s;
+
+}
+
 .contacto:hover{
 
     transform:translateY(-8px);
 
     box-shadow:0 20px 45px rgba(0,0,0,.18);
 
-}.proyecto,
-.residuos,
+}
+
+.contacto h2{
+
+    color:#176c3a;
+
+    font-size:42px;
+
+    margin-bottom:25px;
+
+}
+
+.contacto p{
+
+    font-size:20px;
+
+    color:#444;
+
+    margin:12px 0;
+
+    line-height:32px;
+
+}
+
+/*==================================================
+    FOOTER
+==================================================*/
+
+footer{
+
+    background:#0d4025;
+
+    color:white;
+
+    text-align:center;
+
+    padding:25px;
+
+    margin-top:60px;
+
+    font-size:15px;
+
+}
+
+/*==================================================
+    BOTÓN VOLVER ARRIBA
+==================================================*/
+
+#volver-arriba{
+
+    position:fixed;
+
+    right:25px;
+
+    bottom:25px;
+
+    width:55px;
+
+    height:55px;
+
+    border:none;
+
+    border-radius:50%;
+
+    background:#46b946;
+
+    color:white;
+
+    font-size:24px;
+
+    cursor:pointer;
+
+    display:none;
+
+    box-shadow:0 10px 20px rgba(0,0,0,.25);
+
+    transition:.3s;
+
+    z-index:999;
+
+}
+
+#volver-arriba:hover{
+
+    background:#2f8f2f;
+
+    transform:translateY(-4px);
+
+}
+
+/*==================================================
+    ANIMACIONES
+==================================================*/
+
+.animar{
+
+    opacity:0;
+
+    transform:translateY(40px);
+
+    transition:all .8s ease;
+
+}
+
+.animar.visible{
+
+    opacity:1;
+
+    transform:translateY(0);
+
+}
+
+/*==================================================
+    RESPONSIVE
+==================================================*/
+
+@media(max-width:768px){
+
+    .compostaje,
+    .secadero,
+    .escuela{
+
+        flex-direction:column;
+
+        text-align:center;
+
+        padding:35px;
+
+    }
+
+    .compostaje h2,
+    .secadero h2,
+    .escuela h2,
+    .contacto h2{
+
+        font-size:34px;
+
+    }
+
+    .compostaje img,
+    .secadero img,
+    .escuela img{
+
+        max-width:100%;
+
+    }
+
+    .contacto{
+
+        padding:35px 25px;
+
+    }
+
+}/*==================================================
+    EFECTOS FINALES
+==================================================*/
+
+::selection{
+    background:#46b946;
+    color:#fff;
+}
+
+::-webkit-scrollbar{
+    width:10px;
+}
+
+::-webkit-scrollbar-track{
+    background:#e9efe8;
+}
+
+::-webkit-scrollbar-thumb{
+    background:#46b946;
+    border-radius:20px;
+}
+
+::-webkit-scrollbar-thumb:hover{
+    background:#2f8f2f;
+}
+
+/*==================================================
+    ENLACES
+==================================================*/
+
+a{
+    transition:.3s;
+}
+
+/*==================================================
+    IMÁGENES
+==================================================*/
+
+img{
+    user-select:none;
+    -webkit-user-drag:none;
+}
+
+/*==================================================
+    TARJETAS
+==================================================*/
+
+.tarjeta,
+.proyecto,
 .compostaje,
 .secadero,
 .escuela,
 .contacto{
 
-    background:white;
+    overflow:hidden;
 
-    border-radius:25px;
-
-    border-top:8px solid #46b946;
-
-    box-shadow:0 10px 30px rgba(0,0,0,.12);
-
-    padding:50px;
-
-    margin:60px auto;
-
-}.contacto{
-    width:90%;
-    max-width:1200px;
-    margin:60px auto;
-    padding:50px;
-    background:#ffffff;
-    color:#222;
-    text-align:center;
 }
 
-.contacto h2{
-    color:#176c3a;
-    font-size:40px;
-    margin-bottom:25px;
+/*==================================================
+    ANIMACIÓN DE IMÁGENES
+==================================================*/
+
+.proyecto img,
+.compostaje img,
+.secadero img,
+.escuela img{
+
+    transition:.45s;
+
 }
 
-.contacto p{
-    font-size:20px;
-    line-height:35px;
-    color:#444;
+.proyecto img:hover,
+.compostaje img:hover,
+.secadero img:hover,
+.escuela img:hover{
+
+    transform:scale(1.04);
+
+}
+
+/*==================================================
+    RESPONSIVE GENERAL
+==================================================*/
+
+@media (max-width:768px){
+
+    section{
+
+        width:94%;
+        margin:45px auto;
+
+    }
+
+    .titulo-seccion h2{
+
+        font-size:32px;
+
+    }
+
+    .titulo-seccion p{
+
+        font-size:17px;
+        line-height:28px;
+
+    }
+
+    .proyecto,
+    .residuos,
+    .compostaje,
+    .secadero,
+    .escuela,
+    .contacto{
+
+        padding:30px 22px;
+
+    }
+
+    p{
+
+        font-size:17px;
+
+    }
+
+    h1{
+
+        font-size:38px;
+
+    }
+
+    h2{
+
+        font-size:30px;
+
+    }
+
+    .boton{
+
+        font-size:17px;
+
+    }
+
+}
+
+/*==================================================
+    COMPUTADORAS GRANDES
+==================================================*/
+
+@media (min-width:1400px){
+
+    .navbar,
+    section{
+
+        max-width:1350px;
+
+    }
+
+}
+
+/*==================================================
+    FIN DEL CSS
+==================================================*/
+/*==========================
+   EJEMPLOS DE RESIDUOS
+==========================*/
+
+.ejemplos{
+
+    display:flex;
+
+    justify-content:center;
+
+    gap:20px;
+
+    margin-top:20px;
+
+}
+
+.iconos-residuos{
+
+    display:flex;
+    justify-content:center;
+    gap:35px;
+    margin-top:20px;
+
+}
+
+.iconos-residuos div{
+
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    font-weight:600;
+    color:#2b2b2b;
+
+}
+
+.iconos-residuos div{
+
+    font-size:42px;
+
+}
+
+.iconos-residuos span{
+
+    margin-top:8px;
+    font-size:14px;
+
 }

@@ -4,189 +4,262 @@
 <head>
 
     <meta charset="UTF-8">
+
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <title>Las Tunas Resiliente</title>
 
-    <link rel="stylesheet" href="style.css"><link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 
 </head>
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
 
 <body>
 
-    <!-- =================== MENÚ =================== -->
+<header>
 
-    <header>
+    <nav class="navbar">
 
-        <nav class="navbar">
+        <div class="logo">
 
-            <div class="logo">
+            <img src="logo.png" alt="Logo">
 
-                <img src="logo.png" alt="Logo Las Tunas Resiliente">
+            <div>
 
-                <div>
+                <h2>Las Tunas Resiliente</h2>
 
-                    <h2>Las Tunas Resiliente</h2>
-
-                    <p>E.E.S.O. N° 698 "Ing. Miguel Lifschitz"</p>
-
-                </div>
+                <p>E.E.S.O. N° 698 "Ing. Miguel Lifschitz"</p>
 
             </div>
 
-          <ul>
-
-    <li><a href="#inicio">Inicio</a></li>
-    <li><a href="#proyecto">Proyecto</a></li>
-    <li><a href="#residuos">Residuos</a></li>
-    <li><a href="#compostaje">Compostaje</a></li>
-    <li><a href="#secadero">Secadero Solar</a></li>
-    <li><a href="#escuela">Escuela</a></li>
-    <li><a href="#contacto">Contacto</a></li>
-
-</ul>
-
-        </nav>
-
-    </header>
-
-    <!-- =================== PORTADA =================== -->
-
-    <section class="hero" id="inicio">
-
-        <div class="hero-contenido">
-
-            <h1>Ecoestación Climática Comunitaria</h1>
-
-            <p>
-
-                Innovación local para construir una comunidad
-                más sustentable, resiliente y comprometida con
-                el cuidado del ambiente.
-
-            </p>
-
-            <a href="#proyecto" class="boton">
-
-                Conocer el proyecto
-
-            </a>
-
         </div>
 
-    </section>
-    <div class="separador"></div>
-    <!-- =================== PROYECTO =================== -->
+        <button class="menu-btn" onclick="abrirMenu()">
+            ☰
+        </button>
 
-<section class="proyecto" id="proyecto">
+        <ul id="menu">
+
+            <li><a href="#inicio">Inicio</a></li>
+
+            <li><a href="#proyecto">Proyecto</a></li>
+
+            <li><a href="#residuos">Residuos</a></li>
+
+            <li><a href="#compostaje">Compostaje</a></li>
+
+            <li><a href="#secadero">Secadero Solar</a></li>
+
+            <li><a href="#escuela">Escuela</a></li>
+
+            <li><a href="#contacto">Contacto</a></li>
+
+        </ul>
+
+    </nav>
+
+</header>
+
+<!-- ================= HERO ================= -->
+
+<section class="hero" id="inicio">
+
+    <div class="hero-contenido">
+
+        <h1>
+            Ecoestación Climática Comunitaria
+        </h1>
+
+        <p>
+
+            Innovación local para construir una comunidad
+            más sostenible, resiliente y comprometida
+            con el cuidado del ambiente.
+
+        </p>
+
+        <a href="#proyecto" class="boton">
+
+            Conocer el proyecto
+
+        </a>
+
+    </div>
+
+</section>
+<!-- ================= PROYECTO ================= -->
+
+<section class="proyecto animar" id="proyecto">
 
     <div class="proyecto-texto">
 
-        <span class="subtitulo">Nuestro Proyecto</span>
+        <span class="subtitulo">
+            Nuestro Proyecto
+        </span>
 
-        <h2>¿Qué es la Ecoestación Climática Comunitaria?</h2>
-
-        <p>
-            La Ecoestación Climática Comunitaria es una propuesta de la
-            E.E.S.O. N° 698 "Ing. Miguel Lifschitz" para transformar la
-            escuela en un espacio de educación, participación y acción ambiental.
-        </p>
+        <h2>
+            ¿Qué es la Ecoestación Climática Comunitaria?
+        </h2>
 
         <p>
-            El proyecto busca fortalecer la resiliencia frente al cambio
-            climático mediante la gestión responsable de residuos,
-            el compostaje y la participación de toda la comunidad.
+            La Ecoestación Climática Comunitaria es un espacio pensado para promover
+            el cuidado del ambiente mediante la educación, la gestión responsable de
+            los residuos y la participación activa de toda la comunidad.
         </p>
 
-        <a href="#residuos" class="boton-secundario">
-            Ver acciones
-        </a>
+        <br>
+
+        <p>
+            Nuestro objetivo es reducir el impacto ambiental, fomentar hábitos
+            sostenibles y generar conciencia sobre el cambio climático mediante
+            acciones concretas realizadas por estudiantes, docentes y vecinos.
+        </p>
 
     </div>
 
     <div class="proyecto-imagen">
 
-       <img src="proyecto.png" alt="Escuela">
+        <img src="proyecto.png" alt="Ecoestación Climática">
 
     </div>
 
 </section>
+
 <div class="separador"></div>
-<!-- =================== GESTIÓN DE RESIDUOS =================== -->
 
-<section class="residuos" id="residuos"></section>
+<!-- ================= RESIDUOS ================= -->
 
-    <div class="titulo-seccion">
+<section class="residuos animar" id="residuos">
 
-        <h2>Gestión de Residuos</h2>
+    <h2>Gestión de Residuos</h2>
+
+    <p class="descripcion">
+        Una correcta separación de los residuos permite reciclar, reducir la contaminación y aprovechar mejor los recursos.
+    </p>
+
+    <div class="contenedor-residuos">
+
+        <!-- ORGÁNICOS -->
+        <div class="tarjeta-residuo">
+            <h3>🌿 Orgánicos</h3>
+
+            <p>
+                Restos de alimentos, hojas, césped y otros materiales biodegradables
+                que pueden convertirse en compost.
+            </p>
+
+            <div class="iconos-residuos">
+                <div>🍌<span>Cáscaras</span></div>
+                <div>🍎<span>Frutas</span></div>
+            </div>
+        </div>
+
+        <!-- INORGÁNICOS -->
+        <div class="tarjeta-residuo">
+            <h3>♻️ Inorgánicos</h3>
+
+            <p>
+                Papel, cartón, plástico, vidrio y metales que pueden reciclarse.
+            </p>
+
+            <div class="iconos-residuos">
+                <div>🧴<span>Plástico</span></div>
+                <div>🥫<span>Latas</span></div>
+            </div>
+        </div>
+
+        <!-- NO RECICLABLES -->
+        <div class="tarjeta-residuo">
+            <h3>🚮 No reciclables</h3>
+
+            <p>
+                Residuos que no pueden recuperarse mediante procesos de reciclaje.
+            </p>
+
+            <div class="iconos-residuos">
+                <div>🧻<span>Papel</span></div>
+                <div>😷<span>Barbijo</span></div>
+            </div>
+        </div>
+
+    </div>
+
+</section>
+
+<div class="separador"></div>
+<!-- ================= COMPOSTAJE ================= -->
+
+<section class="compostaje animar" id="compostaje">
+
+    <div class="compostaje-imagen">
+
+        <img src="compostaje.jpg" alt="Compostaje">
+
+    </div>
+
+    <div class="compostaje-texto">
+
+        <span class="subtitulo">
+            Compostaje
+        </span>
+
+        <h2>
+            Transformar residuos en vida
+        </h2>
 
         <p>
-            Una correcta separación de los residuos permite reciclar, reducir la
-            contaminación y disminuir las emisiones de gases de efecto invernadero.
+            El compostaje permite aprovechar los residuos orgánicos para obtener un
+            abono natural rico en nutrientes que mejora la calidad del suelo y
+            favorece el crecimiento de las plantas.
+        </p>
+
+        <br>
+
+        <p>
+            Con esta práctica disminuye la cantidad de residuos enviados al basural,
+            se reduce la contaminación y se promueve una economía circular dentro de
+            la comunidad.
         </p>
 
     </div>
 
-    <div class="contenedor-residuos">
+</section>
 
-        <div class="tarjeta verde">
+<div class="separador"></div>
 
-            <h3>🌱 Orgánicos</h3>
-<div class="iconos-residuos">
+<!-- ================= SECADERO SOLAR ================= -->
 
-    <i class="fa-solid fa-apple-whole"></i>
+<section class="secadero animar" id="secadero">
 
-    <i class="fa-solid fa-seedling"></i>
+    <div class="secadero-texto">
 
-</div>
-            <p>
-                Restos de frutas, verduras, yerba, hojas secas, servilletas de papel y otros materiales
-                biodegradables que pueden transformarse en compost.
-            </p>
+        <span class="subtitulo">
+            Secadero Solar
+        </span>
 
-        </div>
+        <h2>
+            Aprovechando la energía del sol
+        </h2>
 
-        <div class="tarjeta azul">
+        <p>
+            El secadero solar utiliza la energía solar para deshidratar frutas,
+            verduras, hierbas y otros alimentos sin consumir electricidad.
+        </p>
 
-            <h3>♻️ Reciclables</h3>
-<div class="iconos-residuos">
+        <br>
 
-    <i class="fa-solid fa-wine-bottle"></i>
-
-    <i class="fa-solid fa-box"></i>
-
-</div>
-            <p>
-                Papel, cartón, vidrio, plástico y metales limpios y secos para
-                su reutilización y reciclado.
-            </p>
-
-        </div>
-
-        <div class="tarjeta gris">
-
-            <h3>🚫 No reciclables</h3>
-<div class="iconos-residuos">
-
-    <i class="fa-solid fa-trash"></i>
-
-    <i class="fa-solid fa-lightbulb"></i>
-
-</div>
-            <p>
-                Residuos que no pueden recuperarse y deben disponerse de forma
-                responsable para minimizar su impacto ambiental.
-            </p>
-
-        </div>
+        <p>
+            Esta tecnología es económica, sustentable y permite conservar alimentos
+            durante más tiempo, reduciendo desperdicios y aprovechando los recursos
+            naturales disponibles.
+        </p>
 
     </div>
-<section>
-    <div class="separador"></div>
-</section><section class="secadero" id="secadero">
 
     <div class="secadero-imagen">
 
@@ -194,73 +267,30 @@
 
     </div>
 
-    <div class="secadero-texto">
-
-        <span class="subtitulo">Energía Renovable</span>
-
-        <h2>Secadero Solar</h2>
-
-        <p>
-            El secadero solar es una estructura que aprovecha la energía del sol
-            para deshidratar frutas, verduras, hierbas y otros alimentos sin
-            utilizar electricidad ni combustibles.
-        </p>
-
-        <p>
-            Su incorporación a la Ecoestación permitirá demostrar el uso de
-            energías renovables, reducir el consumo energético y promover
-            prácticas sustentables dentro de la comunidad educativa.
-        </p>
-
-    </div>
-
 </section>
+
 <div class="separador"></div>
-<!-- =================== COMPOSTAJE =================== -->
 
-<section class="compostaje" id="compostaje">
+<!-- ================= ESCUELA ================= -->
 
-    <div class="compostaje-imagen">
-
-        <img src="https://images.unsplash.com/photo-1523348837708-15d4a09cfac2?auto=format&fit=crop&w=900&q=80" alt="Compostaje">
-
-    </div>
-
-    <div class="compostaje-texto">
-
-        <span class="subtitulo">Acción Ambiental</span>
-
-        <h2>Compostaje</h2>
-
-        <p>
-            El compostaje permite transformar los residuos orgánicos en un
-            abono natural rico en nutrientes, reduciendo la cantidad de basura
-            enviada a disposición final.
-        </p>
-
-        <p>
-            Además, contribuye a disminuir las emisiones de metano y mejora la
-            calidad del suelo, promoviendo una economía circular dentro de la comunidad.
-        </p>
-
-    </div>
-
-</section>
-<div class="separador"></div>
-<!-- =================== ESCUELA =================== -->
-
-<section class="escuela" id="escuela">
+<section class="escuela animar" id="escuela">
 
     <div class="escuela-texto">
 
-        <span class="subtitulo">Nuestra Institución</span>
+        <span class="subtitulo">
+            Nuestra Institución
+        </span>
 
-        <h2>E.E.S.O. N° 698 "Ing. Miguel Lifschitz"</h2>
+        <h2>
+            E.E.S.O. N° 698 "Ing. Miguel Lifschitz"
+        </h2>
 
         <p>
             Nuestra escuela impulsa proyectos que promueven el cuidado del ambiente,
             la participación ciudadana y el compromiso con el desarrollo sostenible.
         </p>
+
+        <br>
 
         <p>
             La Ecoestación Climática Comunitaria busca que estudiantes, docentes,
@@ -277,27 +307,53 @@
     </div>
 
 </section>
+
 <div class="separador"></div>
-<!-- =================== CONTACTO =================== -->
+<!-- ================= CONTACTO ================= -->
 
-<section class="contacto" id="contacto">
+<section class="contacto animar" id="contacto">
 
-    <h2>Contacto</h2>
+    <span class="subtitulo">
+        Contacto
+    </span>
 
-    <p><strong>Proyecto:</strong> Las Tunas Resiliente</p>
+    <h2>Las Tunas Resiliente</h2>
+
+    <p>
+        Si deseas conocer más sobre este proyecto o comunicarte con nuestra
+        institución, puedes hacerlo a través de la siguiente información.
+    </p>
+
+    <br>
 
     <p><strong>Escuela:</strong> E.E.S.O. N° 698 "Ing. Miguel Lifschitz"</p>
 
     <p><strong>Localidad:</strong> Las Tunas, Santa Fe, Argentina</p>
 
+    <p><strong>Proyecto:</strong> Ecoestación Climática Comunitaria</p>
+
 </section>
+
+<!-- ================= BOTÓN VOLVER ARRIBA ================= -->
+
+<button id="volver-arriba" title="Volver arriba">
+
+    ↑
+
+</button>
+
+<!-- ================= FOOTER ================= -->
+
 <footer>
 
     <p>
         © 2026 Las Tunas Resiliente - Ecoestación Climática Comunitaria
     </p>
+
 </footer>
+
+<script src="script.js"></script>
+
 </body>
 
-</html><!-- =================== SECADERO SOLAR =================== -->
-
+</html>
