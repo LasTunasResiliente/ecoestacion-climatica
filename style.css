@@ -274,27 +274,31 @@ header{
 
     }
 
-    #menu{
+   #menu{
+    display:none;
+    position:absolute;
+    top:100%;
+    left:0;
+    width:100%;
+    background:#176b3f;
+    padding:15px 0;
+    margin:0;
+    text-align:center;
+    z-index:1000;
+}
 
-        display:none;
+#menu.activo{
+    display:block;
+}
 
-        width:100%;
+#menu li{
+    margin:0;
+    padding:10px 0;
+}
 
-        flex-direction:column;
-
-        text-align:center;
-
-        margin-top:20px;
-
-        gap:18px;
-
-    }
-
-    #menu.activo{
-
-        display:flex;
-
-    }
+#menu a{
+    font-size:18px;
+}
 
     .hero{
 
@@ -320,7 +324,72 @@ header{
         width:100%;
         max-width:320px;
 
-    }
+    }.secadero{
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+}
+
+.secadero-texto{
+    width:100%;
+    text-align:center;
+}
+
+.secadero-imagen{
+    width:100%;
+    margin-top:30px;
+}
+
+.secadero-imagen img{
+    display:block;
+    width:100%;
+    max-width:350px;
+    height:auto;
+    margin:0 auto;
+    border-radius:20px;
+}/* AJUSTE DEL HEADER EN CELULAR */
+
+header{
+    height:auto;
+    min-height:0;
+}
+
+.navbar{
+    height:70px;
+    padding:8px 15px;
+    box-sizing:border-box;
+    position:relative;
+    display:flex;
+    align-items:center;
+}
+
+.logo{
+    display:flex;
+    align-items:center;
+}
+
+.logo img{
+    width:60px;
+    height:60px;
+}
+
+.menu-btn{
+    display:block;
+    margin-left:auto;
+    font-size:28px;
+    background:none;
+    border:none;
+    color:white;
+    cursor:pointer;
+}
+
+#menu{
+    position:absolute;
+    top:70px;
+    left:0;
+    width:100%;
+    box-sizing:border-box;
+}
 
 }/*==================================================
     PROYECTO
